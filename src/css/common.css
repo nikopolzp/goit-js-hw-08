@@ -16,3 +16,28 @@ img {
   display: block;
   max-width: 100%;
 }
+
+ul {
+  list-style: none;
+}
+
+li.item {
+  margin-bottom: 25px;
+  
+}
+a.link {
+  text-decoration: none;
+  color: rgb(12, 192, 12);
+  font-weight: 500;
+  font-size: 15px;
+  width: 250px;
+  padding: 8px 12px;
+  border: 1px;
+  background-color: darkslategrey;
+  border-radius: 15px;
+  box-shadow: 5px 3px 3px red;
+  cursor: pointer;
+}
+a.link:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
