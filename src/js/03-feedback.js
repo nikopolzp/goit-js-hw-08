@@ -28,7 +28,8 @@ const load = key => {
         // localStorage.getItem() - возвращает значение ключа 
         //если его нет null
         return serializedState === null ? undefined : JSON.parse(serializedState);
-         } catch (error) {
+    } catch (error)
+    {
     console.error('Get state error: ', error.message);
   }
 };
