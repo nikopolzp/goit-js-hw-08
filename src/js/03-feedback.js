@@ -14,15 +14,20 @@ form.addEventListener(
 );
 
 form.addEventListener('submit', e => {
-  e.preventDefault();
-  console.log({ email: email.value, message: message.value });
-  form.reset();
-  localStorage.removeItem(LOCALSTORAGE_KEY);
+  e.preventDefault(); // отмена обновления страницы
+    console.log({ email: email.value, message: message.value });
+     //вывод в консоль значений
+    form.reset();
+    //очистка полей формы
+    localStorage.removeItem(LOCALSTORAGE_KEY);
+    // очистка хранилища
 });
 
 const load = key => {
   try {
-    const serializedState = localStorage.getItem(key);
+      const serializedState = localStorage.getItem(key);
+        // localStorage.getItem() - возвращает значение ключа 
+        //если его нет null
     return serializedState === null ? undefined : JSON.parse(serializedState);
   } catch (error) {
     console.error('Get state error: ', error.message);
