@@ -10,4 +10,7 @@ player.on('timeupdate',  throttle( elem => {
     );
 
 player
-.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+    .setCurrentTime(localStorage.getItem('videoplayer-current-time')).catch(function (error) {
+     console.error(error)
+    // an error occurred setting the color
+});
